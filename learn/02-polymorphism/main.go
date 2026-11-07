@@ -7,16 +7,16 @@
 // `class Foo : IBar` and no `implements` keyword. If it has the methods, it fits.
 // This is "structural typing" (a.k.a. duck typing, checked at compile time).
 //
-// C# map: like an interface + Func dispatch, but you never DECLARE that a type
-// implements it. You just write the methods; the compiler verifies the fit at
-// the point of use. This lets you make types you don't own satisfy YOUR
-// interface, and keeps packages decoupled.
+// C# map: in C# a class must say `: ICheck` to count as an ICheck. In Go there
+// is no such line. The compiler checks the fit only where you USE a value as a
+// Check (e.g. putting it in a []Check). Upshot: you can declare an interface in
+// your package and have a type from a library you don't own satisfy it.
 //
-// THE GO IDIOM: "accept interfaces, return structs." Functions take the small
-// interface they need (the behavior), not a concrete type — so callers can swap
-// implementations freely (real one in prod, a fake in tests). You'll see this
-// in Phase 3: the `health` package defines the Repository interface it needs,
-// and the Postgres `store` satisfies it without either importing a base class.
+// THE GO IDIOM: "accept interfaces." A rule about parameters: ask for the
+// interface, e.g. runAll(checks []Check) below, not runAll(checks []DiskCheck)
+// — then any Check works, including a fake in tests. (Same instinct as taking
+// IEnumerable<T> over List<T> in C#.) Phase 3 does exactly this: `health`
+// declares the Repository interface it needs; the Postgres `store` satisfies it.
 package main
 
 import "fmt"
@@ -28,6 +28,13 @@ type Check interface {
 }
 
 // --- Three unrelated structs. None says "implements Check". ---
+//
+// No class keyword. In C# you put a method inside the class braces to say "this
+// belongs to PingCheck". Go has no class braces, so it says the same thing with
+// the RECEIVER: the `(p PingCheck)` before the method name. `p` is C#'s `this`,
+// just named explicitly. The method is a member of the struct either way.
+// Structs are value types (copied on assign, like C# structs); use `*PingCheck`
+// for C#-class-style reference semantics.
 
 type PingCheck struct{ Host string }
 

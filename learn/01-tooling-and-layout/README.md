@@ -21,6 +21,36 @@ dependencies are forced to flow one way — that keeps the domain at the center 
 |--------|---------|------------|
 | `cmd/<name>/` | a runnable program (`package main` + `func main()`) | a console app with `Main()` |
 | `internal/...` | library code, importable only within this module | a class library marked `internal` |
+| any dir of `.go` files | a **package**: one namespace, one unit of visibility | a namespace, but one per directory |
+
+### Inside a package, files are just chunks
+
+Every `.go` file in a directory is the same package and shares one namespace — no `using`
+between them, nothing private to a file. So there is **no file-per-class rule**: keep cohesive
+types together (lesson 02 has three structs in one file) and split a file only when it gets
+long. Tests sit beside the code as `foo_test.go`.
+
+### Visibility: the first letter is the access modifier
+
+Go has no `public`, `private`, or `internal` keywords. The case of the first letter decides:
+
+| First letter | Who can use it | C# analogy |
+|---|---|---|
+| Capital (`Aggregator`, `Record`) | any package that imports this one | `public` |
+| lowercase (`newAggregator`, `percentile`) | only files in this package | `internal`, scoped to one directory |
+
+The rule applies to **everything** named: types, functions, methods, struct fields, constants,
+variables. See [`internal/engine/aggregator.go`](../../internal/engine/aggregator.go): the
+exported surface is readable by scanning for capitals; the lowercase helpers are implementation.
+
+Two things that bite C# developers:
+
+- **Struct fields too.** `type Check struct{ host string }` has a field nobody outside the
+  package can read — and `encoding/json` will silently skip it. If it should serialise, it must
+  be `Host`.
+- **There is no `private` in the C# sense.** A lowercase name is visible to every file in the
+  package, not just the one that declares it. Files are chunks of one package, so that's
+  consistent — but you can't hide a helper from a sibling file.
 
 ## 2. Imports look like URLs
 
