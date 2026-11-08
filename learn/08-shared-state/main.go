@@ -13,9 +13,10 @@
 // even panic with "concurrent map writes". `go run -race` detects this.
 //
 // TWO TOOLS (pick per field):
-//   sync/atomic   lock-free integer ops. atomic.Int64.Add ≈ Interlocked.Increment.
-//   sync.Mutex    a lock around a critical section. mu.Lock()/Unlock() ≈ lock(obj){}.
-//                 (C#'s ConcurrentDictionary is roughly "a map with the lock built in".)
+//
+//	sync/atomic   lock-free integer ops. atomic.Int64.Add ≈ Interlocked.Increment.
+//	sync.Mutex    a lock around a critical section. mu.Lock()/Unlock() ≈ lock(obj){}.
+//	              (C#'s ConcurrentDictionary is roughly "a map with the lock built in".)
 package main
 
 import (

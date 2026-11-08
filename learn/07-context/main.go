@@ -11,14 +11,15 @@
 // call cancel()), ctx.Done() "fires" and every goroutine watching it bails out.
 //
 // THE PATTERN you'll see everywhere in Go:
-//   select {
-//   case <-workFinished:  // the happy path
-//   case <-ctx.Done():    // cancelled or timed out -> stop now
-//   }
+//
+//	select {
+//	case <-workFinished:  // the happy path
+//	case <-ctx.Done():    // cancelled or timed out -> stop now
+//	}
 //
 // TWO RULES:
-//   1. Pass ctx as the FIRST argument: func F(ctx context.Context, ...).
-//   2. ALWAYS `defer cancel()` on a context you create — it releases the timer.
+//  1. Pass ctx as the FIRST argument: func F(ctx context.Context, ...).
+//  2. ALWAYS `defer cancel()` on a context you create — it releases the timer.
 package main
 
 import (
