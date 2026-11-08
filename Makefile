@@ -34,6 +34,15 @@ demo: ## One-shot demo: start mock server, generate URLs, run the engine
 	go run -race ./cmd/worker -file testdata/urls.txt -workers 50 -timeout 3s; \
 	kill $$SRV
 
+# ---- Learning track -------------------------------------------------------
+
+.PHONY: lesson
+lesson: ## Run a learn/ lesson by number, e.g. `make lesson L=04` (race detector on)
+	@test -n "$(L)" || { echo "usage: make lesson L=<nn>   (e.g. make lesson L=04)"; exit 2; }
+	@dir=$$(ls -d learn/$(L)-*/ 2>/dev/null | head -1); \
+	test -n "$$dir" || { echo "no lesson matching learn/$(L)-*"; ls -d learn/*/; exit 2; }; \
+	echo ">> go run -race ./$$dir"; go run -race ./$$dir
+
 # ---- Quality --------------------------------------------------------------
 
 .PHONY: test

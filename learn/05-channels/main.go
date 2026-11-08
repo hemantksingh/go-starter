@@ -6,8 +6,10 @@
 // they produced. The moment you want an answer back, WaitGroup isn't enough.
 //
 // THE ONE IDEA: a channel is a typed, thread-safe pipe between goroutines.
-//   ch <- v      send v into the channel
-//   v := <-ch    receive the next value out of it
+//
+//	ch <- v      send v into the channel
+//	v := <-ch    receive the next value out of it
+//
 // It's like a BlockingCollection<T> (with bounded capacity) — but it's also how
 // goroutines synchronize. On an UNBUFFERED channel, a send blocks until some
 // other goroutine is ready to receive (and vice-versa). That hand-off is the
@@ -48,7 +50,7 @@ func main() {
 		close(results)
 	}()
 
-	// Receive until the channel is closed and drained. `range` over a channel is
+	// `main` receives until the channel is closed and drained. `range` over a channel is
 	// the clean way to consume "an unknown number of values, then stop."
 	sum := 0
 	for r := range results {

@@ -36,7 +36,7 @@ real engine — written for a C#/.NET background. See [`learn/README.md`](learn/
 | 03 | closures | 07 | context (timeouts) |
 | 04 | goroutines | 08 | shared state (mutex/atomic) |
 
-Run any lesson: `go run ./learn/01-tooling-and-layout`.
+Run any lesson: `make lesson L=01`, or directly with `go run ./learn/01-tooling-and-layout`.
 
 ## Quick start (Phase 1, no infrastructure needed)
 
