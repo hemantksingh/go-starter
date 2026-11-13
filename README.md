@@ -23,8 +23,8 @@ counters. Each phase layers on a new concept and stays runnable on its own.
 
 - **Phase 0 — Foundation** ✅ config, Zap logger, Makefile.
 - **Phase 1 — Concurrency engine** ✅ worker pool, channels, context timeouts, thread-safe aggregation.
-- **Phase 2 — Web API + middleware** ⏳ chi, middleware chain, graceful shutdown.
-- **Phase 3 — Postgres** ⏳ pgx pool, sqlc, migrations, repository interface.
+- **Phase 2 — Web API + middleware** ✅ chi, tenant + observability middleware, async runs, graceful shutdown.
+- **Phase 3 — Postgres** ⏳ pgx pool per tenant, sqlc, migrations, `healthrun.Store` impl.
 - **Phase 4 — Auth + OpenAPI** ⏳ JWT/JWKS middleware, Swagger UI.
 - **Phase 5 — Testing** ⏳ table-driven tests, `httptest`, mocks, race detector.
 

@@ -25,6 +25,10 @@ testserver: ## Run the offline mock target server on :8088
 worker: ## Run the health-check engine over testdata/urls.txt (race detector on)
 	go run -race ./cmd/worker -file testdata/urls.txt -workers 50 -timeout 3s
 
+.PHONY: api
+api: ## Run the HTTP API on :8080 (race detector on)
+	go run -race ./cmd/api
+
 .PHONY: demo
 demo: ## One-shot demo: start mock server, generate URLs, run the engine
 	@echo ">> starting mock server in background"; \

@@ -1,0 +1,4 @@
+[
+  { "id": "acme", "name": "Acme Corp" },
+  { "id": "globex", "name": "Globex Inc", "max_urls": 100 }
+]

@@ -16,3 +16,9 @@ coverage.out
 .DS_Store
 .idea/
 .vscode/
+
+# Binaries built with `go build ./cmd/<name>` land here
+/api
+/worker
+/testserver
+/gen-urls

@@ -35,6 +35,8 @@ type HTTPConfig struct {
 	ReadTimeout     time.Duration // max time to read the full request
 	WriteTimeout    time.Duration // max time to write the response
 	ShutdownTimeout time.Duration // grace period for in-flight requests on shutdown
+	MaxBodyBytes    int64         // cap on a request body (POST /runs is newline-delimited URLs)
+	TenantsFile     string        // JSON file the tenant registry loads at startup
 }
 
 // DBConfig holds Postgres connection settings (used from Phase 3 onward).
@@ -51,6 +53,7 @@ type EngineConfig struct {
 	Workers    int           // number of worker goroutines in the pool
 	Timeout    time.Duration // per-URL HTTP timeout (the context deadline)
 	BufferSize int           // capacity of the buffered jobs channel
+	MaxURLs    int           // global cap on URLs per run; a tenant may override it
 }
 
 // AuthConfig holds OAuth2 resource-server settings (Phase 4). The service is a
@@ -76,6 +79,8 @@ func Load() (Config, error) {
 			ReadTimeout:     getEnvDuration("HTTP_READ_TIMEOUT", 10*time.Second),
 			WriteTimeout:    getEnvDuration("HTTP_WRITE_TIMEOUT", 30*time.Second),
 			ShutdownTimeout: getEnvDuration("HTTP_SHUTDOWN_TIMEOUT", 15*time.Second),
+			MaxBodyBytes:    int64(getEnvInt("HTTP_MAX_BODY_BYTES", 1<<20)),
+			TenantsFile:     getEnv("TENANTS_FILE", "testdata/tenants.json"),
 		},
 		DB: DBConfig{
 			DSN:         getEnv("DATABASE_URL", "postgres://postgres:postgres@localhost:5432/healthchecks?sslmode=disable"),
@@ -86,6 +91,7 @@ func Load() (Config, error) {
 			Workers:    getEnvInt("ENGINE_WORKERS", 50),
 			Timeout:    getEnvDuration("ENGINE_TIMEOUT", 5*time.Second),
 			BufferSize: getEnvInt("ENGINE_BUFFER", 1000),
+			MaxURLs:    getEnvInt("ENGINE_MAX_URLS", 10000),
 		},
 		Auth: AuthConfig{
 			Issuer:   getEnv("AUTH_ISSUER", ""),
@@ -101,6 +107,15 @@ func Load() (Config, error) {
 	}
 	if cfg.Engine.Timeout <= 0 {
 		return Config{}, fmt.Errorf("config: ENGINE_TIMEOUT must be > 0, got %s", cfg.Engine.Timeout)
+	}
+	if cfg.Engine.MaxURLs <= 0 {
+		return Config{}, fmt.Errorf("config: ENGINE_MAX_URLS must be > 0, got %d", cfg.Engine.MaxURLs)
+	}
+	if cfg.HTTP.MaxBodyBytes <= 0 {
+		return Config{}, fmt.Errorf("config: HTTP_MAX_BODY_BYTES must be > 0, got %d", cfg.HTTP.MaxBodyBytes)
+	}
+	if cfg.HTTP.TenantsFile == "" {
+		return Config{}, fmt.Errorf("config: TENANTS_FILE must be set")
 	}
 
 	return cfg, nil

@@ -5,16 +5,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 A pedagogical Go project for an engineer coming from C#/Java. It is built as **one coherent
-application** — a distributed URL health-check service — that introduces Go's idioms layer by
-layer rather than as disconnected examples. The full multi-phase plan lives at
-`~/.claude/plans/lovely-munching-lynx.md`.
+application** — a multi-tenant URL health-check service — that introduces Go's idioms layer by
+layer rather than as disconnected examples. Design decisions with real alternatives are recorded
+as ADRs in `docs/adr/`; read those before changing the router or the tenancy model.
 
 **Build phases incrementally; each must stay independently runnable.** When asked to add a
 capability, prefer extending the current phase's slice over scaffolding everything at once.
-Current state: **Phase 0 (foundation) + Phase 1 (concurrency engine) are implemented**, and the
-engine has unit tests (`internal/engine/*_test.go`: aggregator internals, plus `Run` against an
-`httptest` server). Phases 2–5 (web API + middleware, Postgres via pgx/sqlc, JWT auth + OpenAPI,
-tests for the API/store layers) are planned but not yet written.
+Current state: **Phases 0–2 are implemented**: foundation, the concurrency engine, and the
+multi-tenant HTTP API (`cmd/api`), each with tests. Phases 3–5 (Postgres via pgx/sqlc with one
+database per tenant, JWT auth + OpenAPI, tests for the store layer) are planned but not yet
+written.
 
 ## Learning track (`learn/`)
 
@@ -30,6 +30,7 @@ and update both READMEs + the memory note. Use **C# analogies, not Java**.
 ```bash
 make help              # list all targets
 make build             # compile all cmds into ./bin
+make api               # run the HTTP API on :8080 (race on); see cmd/api/main.go for curl examples
 make demo              # start mock server, generate 10k URLs, run the engine (race on)
 make test              # go test -race ./...   (race detector is always on)
 make vet               # go vet ./...
@@ -54,17 +55,26 @@ The dependency direction is the central lesson and must be preserved:
 
 ```
 cmd/* (composition root: the ONLY place concrete types are wired together)
-  └─ httpapi  ──▶  health (Service)  ──▶  store (Repository impl)
-        (transport)      (domain logic)         (persistence)
-                              └─ drives ─▶ engine (concurrency library)
+  └─ httpapi ──▶ healthrun (Service) ──▶ store/* (healthrun.Store impls)
+     (transport)    (domain logic)           (persistence; memory now, postgres in Phase 3)
+         │               └─ drives ─▶ engine (concurrency library, satisfies healthrun.Runner)
+         └─ resolves ─▶ tenant (Registry + context plumbing; owns per-tenant pools in Phase 3)
 ```
 
 - **`cmd/*` is the composition root.** Dependencies are assembled with plain constructors in
   `main` — no DI container, no reflection. This is manual dependency injection by design; do not
   introduce wire/fx without discussion.
-- **Interfaces are declared by the consumer, not the implementer.** The `health` package will
-  define `Repository` (what it needs); `store` implements it. Depend on the small interface, not
-  the concrete struct. (Phase 3.)
+- **Interfaces are declared by the consumer, not the implementer.** `healthrun` defines `Store`
+  and `Runner` (what it needs); `store/memory` and `engine` satisfy them without importing it.
+  `httpapi` likewise declares `RunService`. Depend on the small interface, not the concrete
+  struct. The package is `healthrun`, not `health`, to avoid colliding with `/healthz`.
+- **Multi-tenancy is database-per-tenant** (ADR 0002). The tenant is resolved ONCE per request
+  by middleware from `X-Tenant-ID` and placed on the context via `tenant.WithContext`; nothing
+  below the middleware chooses a tenant. `/healthz` sits outside the tenant group.
+- **Middleware order is the design**: observability outermost (request ID, Zap access log,
+  recoverer), tenant resolution on the API group, and in Phase 4 a principal check attached to
+  write routes at registration (`r.With(Principal).Post(...)`). Runs execute on the service's
+  base context, never on `r.Context()`, which dies when the handler returns.
 - **`internal/engine` is a self-contained library** with no knowledge of HTTP handlers, configs
   beyond `config.EngineConfig`, or databases. Keep it that way so it stays unit-testable in
   isolation.
