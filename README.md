@@ -3,7 +3,10 @@
 A hands-on Go starter for engineers coming from **C#/Java**. Instead of toy snippets, you build
 **one real service**: it ingests a file of ~10,000 URLs, fans them out across a pool of worker
 goroutines over channels, runs HTTP checks under strict timeout contexts, and aggregates the
-results into a thread-safe store. Each phase layers on a new concept and stays runnable on its own.
+results into a thread-safe store. Each piece exists for a reason: the worker pool caps how many checks
+run at once so 10,000 URLs don't become 10,000 open connections; the per-request timeout stops one
+dead host stalling the run; the store is thread-safe because every worker writes into the same
+counters. Each phase layers on a new concept and stays runnable on its own.
 
 ## Stack
 

@@ -8,8 +8,9 @@ import (
 	"time"
 )
 
-// Aggregator is the thread-safe sink that every worker writes into concurrently.
-// This is the "aggregates metrics safely into a thread-safe map" requirement.
+// Aggregator is the SHARED MUTABLE STATE of a run: one instance, written to by
+// every worker goroutine concurrently, read once at the end by Summary(). It is
+// the "aggregates metrics safely into a thread-safe map" requirement.
 //
 // It deliberately demonstrates BOTH of Go's low-level concurrency primitives so
 // you can compare them:
@@ -41,8 +42,16 @@ type Aggregator struct {
 	latencies  []time.Duration // every successful attempt's latency, for percentiles
 }
 
-// newAggregator returns a ready-to-use Aggregator. The map must be initialized
-// here — a nil map panics on write (unlike a nil slice, which you can append to).
+// newAggregator returns the one Aggregator a Run shares with all its workers.
+// It returns a pointer so every worker records into the same instance (and
+// because the mutex inside must never be copied).
+//
+// The maps must be created here with make(). A map's zero value is nil, and
+// writing to a nil map is a runtime error: Go calls it a panic, the equivalent
+// of an unhandled exception, with the message "assignment to entry in nil
+// map". Reading a nil map is fine and returns the zero value. The latencies
+// slice is left at its zero value on purpose: a nil slice is safe to append to,
+// because append allocates the backing array on first use.
 func newAggregator() *Aggregator {
 	return &Aggregator{
 		statusHist: make(map[int]int),
@@ -53,7 +62,12 @@ func newAggregator() *Aggregator {
 // Record folds one Result into the running totals. It is safe to call from many
 // goroutines simultaneously.
 func (a *Aggregator) Record(r Result) {
-	// Counters first — no lock required.
+	// Counters first — no lock required. `total++` would be three steps (read,
+	// add, write) and two goroutines can interleave them, losing an update.
+	// Add(1) is atomic: the CPU has instructions that do read-modify-write on a
+	// single machine word in one indivisible step, so nobody can get in between.
+	// That's also why atomics exist only for word-sized things: ints, pointers,
+	// a flag. No waiting, no lock — just a different instruction.
 	a.total.Add(1)
 	if r.OK() {
 		a.success.Add(1)
@@ -61,8 +75,15 @@ func (a *Aggregator) Record(r Result) {
 		a.failed.Add(1)
 	}
 
-	// Map/slice mutations must hold the lock. defer Unlock guarantees release
-	// even if something below were to panic — the analog of try/finally.
+	// Map/slice mutations must hold the lock. A map write is far more than one
+	// word: hash the key, find the bucket, maybe grow and rehash the table. No
+	// CPU instruction covers that, so there is no atomic map update. The mutex
+	// solves it differently: it doesn't make the steps indivisible, it makes
+	// everyone else wait until we're done. Slower than an atomic, but it works
+	// for any size of critical section.
+	//
+	// defer Unlock guarantees release even if something below were to panic —
+	// the analog of try/finally.
 	a.mu.Lock()
 	defer a.mu.Unlock()
 
