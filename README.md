@@ -12,7 +12,8 @@ counters. Each phase layers on a new concept and stays runnable on its own.
 
 | Concern            | Choice                          | Why (for a C#/Java dev) |
 |--------------------|---------------------------------|--------------------------|
-| HTTP routing       | `chi` on `net/http`             | Idiomatic, middleware-based; teaches the real model, not a framework's |
+| HTTP routing       | `chi` on `net/http`             | Handlers stay stdlib types; route-scoped middleware. [ADR 0001](docs/adr/0001-http-router.md) |
+| Tenancy            | Database per tenant             | Isolation by construction; tenant resolved once per request. [ADR 0002](docs/adr/0002-tenant-isolation.md) |
 | DB access          | `pgx` + `sqlc`                  | Write SQL, get type-safe Go. Compile-time safety, no ORM magic |
 | Dependency wiring  | Manual constructor injection    | Composition over containers — how Go apps are actually built |
 | Auth               | JWT bearer (OAuth2 resource server) | The standard microservice pattern: trust an external IdP |
