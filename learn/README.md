@@ -18,7 +18,7 @@ Run any lesson with `go run ./learn/<folder>` (some note a `-race` variant).
 | 06 | [worker-pool](06-worker-pool) | a fixed pool draining one queue | `Parallel.ForEach(MaxDegreeOfParallelism)` |
 | 07 | [context](07-context) | timeouts & cancellation | `CancellationToken` |
 | 08 | [shared-state](08-shared-state) | combine results safely | `lock`, `Interlocked` |
-| 09 | the-engine *(soon)* | read a file + wire it all together | — |
+| 09 | [the-engine](09-the-engine) | all of the above, wired into one real engine | — |
 
 ## Concept note
 
