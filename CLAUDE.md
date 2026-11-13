@@ -11,9 +11,10 @@ layer rather than as disconnected examples. The full multi-phase plan lives at
 
 **Build phases incrementally; each must stay independently runnable.** When asked to add a
 capability, prefer extending the current phase's slice over scaffolding everything at once.
-Current state: **Phase 0 (foundation) + Phase 1 (concurrency engine) are implemented.** Phases
-2–5 (web API + middleware, Postgres via pgx/sqlc, JWT auth + OpenAPI, tests) are planned but not
-yet written.
+Current state: **Phase 0 (foundation) + Phase 1 (concurrency engine) are implemented**, and the
+engine has unit tests (`internal/engine/*_test.go`: aggregator internals, plus `Run` against an
+`httptest` server). Phases 2–5 (web API + middleware, Postgres via pgx/sqlc, JWT auth + OpenAPI,
+tests for the API/store layers) are planned but not yet written.
 
 ## Learning track (`learn/`)
 
