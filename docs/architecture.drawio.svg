@@ -1,0 +1,614 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" style="background: transparent; background-color: transparent; color-scheme: light;" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1030px" height="672px" viewBox="0 0 1030 672" id="ge-svg-1r86u5Q-31No0k3x7WJx" content="&lt;mxfile&gt;&lt;diagram id=&quot;arch&quot; name=&quot;architecture&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <style type="text/css">
+        @supports (color: light-dark(#000, #fff)) { #ge-svg-1r86u5Q-31No0k3x7WJx { --ge-adaptive-bg: light-dark(#ffffff, var(--ge-dark-color, #121212)); --ge-adaptive-fg: light-dark(#000000, var(--ge-light-color, #ffffff)); } }
+    </style>
+    <defs/>
+    <g>
+        <g data-cell-id="0">
+            <g data-cell-id="1">
+                <g data-cell-id="cmd">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="328" y="0" width="400" height="60" rx="9" ry="9" fill="#f8cecc" stroke="#b85450" pointer-events="all" style="fill: light-dark(rgb(248, 206, 204), rgb(81, 45, 43)); stroke: light-dark(rgb(184, 84, 80), rgb(215, 129, 126));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 398px; height: 1px; padding-top: 30px; margin-left: 329px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    cmd/api/main.go
+                                                </b>
+                                                — composition root
+                                                <br/>
+                                                <i>
+                                                    .NET: Program.cs
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="528" y="27" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="528" y="27">
+                                        cmd/api/main.go — composition root
+                                    </tspan>
+                                    <tspan x="528" y="40">
+                                        .NET: Program.cs
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="client">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="0" y="195" width="120" height="50" rx="7.5" ry="7.5" fill="#ffffff" stroke="#666666" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(102, 102, 102), rgb(149, 149, 149));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 220px; margin-left: 1px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    HTTP client
+                                                </b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="60" y="223" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    HTTP client
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="transport">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="248" y="120" width="560" height="200" rx="30" ry="30" fill="#dae8fc" stroke="#6c8ebf" pointer-events="all" style="fill: light-dark(rgb(218, 232, 252), rgb(29, 41, 59)); stroke: light-dark(rgb(108, 142, 191), rgb(92, 121, 163));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 550px; height: 1px; padding-top: 129px; margin-left: 258px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    internal/httpapi
+                                                </b>
+                                                — transport
+                                                <i>
+                                                    .NET: controllers + middleware pipeline
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="258" y="140" fill="#000000" font-family="Helvetica" font-size="11px" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    internal/httpapi — transport .NET: controllers + middleware pipeline
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="obs">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="268" y="170" width="160" height="120" rx="18" ry="18" fill="#ffffff" stroke="#6c8ebf" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(108, 142, 191), rgb(92, 121, 163));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 230px; margin-left: 269px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    Observability
+                                                </b>
+                                                middleware
+                                                <br/>
+                                                ② request ID · access log · recover
+                                                <br/>
+                                                <i>
+                                                    .NET: logging / exception middleware
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="348" y="215" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="348" y="215">
+                                        Observability middleware
+                                    </tspan>
+                                    <tspan x="348" y="227">
+                                        ② request ID · access log · recover
+                                    </tspan>
+                                    <tspan x="348" y="239">
+                                        .NET: logging / exception
+                                    </tspan>
+                                    <tspan x="348" y="251">
+                                        middleware
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="tenantmw">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="448" y="170" width="160" height="120" rx="18" ry="18" fill="#ffffff" stroke="#6c8ebf" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(108, 142, 191), rgb(92, 121, 163));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 230px; margin-left: 449px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    Tenant
+                                                </b>
+                                                middleware
+                                                <br/>
+                                                ③ X-Tenant-ID → Lookup → ctx
+                                                <br/>
+                                                <i>
+                                                    .NET: HttpContext.Items
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="528" y="221" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="528" y="221">
+                                        Tenant middleware
+                                    </tspan>
+                                    <tspan x="528" y="233">
+                                        ③ X-Tenant-ID → Lookup → ctx
+                                    </tspan>
+                                    <tspan x="528" y="245">
+                                        .NET: HttpContext.Items
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="handlers">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="628" y="170" width="160" height="120" rx="18" ry="18" fill="#ffffff" stroke="#6c8ebf" pointer-events="all" style="fill: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); stroke: light-dark(rgb(108, 142, 191), rgb(92, 121, 163));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 230px; margin-left: 629px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    handlers
+                                                </b>
+                                                <br/>
+                                                ④ parse · StartRun · errors → status
+                                                <br/>
+                                                <i>
+                                                    .NET: controller actions + DTOs
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="708" y="215" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="708" y="215">
+                                        handlers
+                                    </tspan>
+                                    <tspan x="708" y="227">
+                                        ④ parse · StartRun · errors →
+                                    </tspan>
+                                    <tspan x="708" y="239">
+                                        status
+                                    </tspan>
+                                    <tspan x="708" y="251">
+                                        .NET: controller actions + DTOs
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="tenantpkg">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="848" y="170" width="180" height="120" rx="18" ry="18" fill="#fff2cc" stroke="#d6b656" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 230px; margin-left: 849px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    internal/tenant
+                                                </b>
+                                                <br/>
+                                                Registry + ctx accessors
+                                                <br/>
+                                                <i>
+                                                    .NET: tenant provider
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="938" y="221" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="938" y="221">
+                                        internal/tenant
+                                    </tspan>
+                                    <tspan x="938" y="233">
+                                        Registry + ctx accessors
+                                    </tspan>
+                                    <tspan x="938" y="245">
+                                        .NET: tenant provider
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="service">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="248" y="390" width="560" height="100" rx="15" ry="15" fill="#d5e8d4" stroke="#82b366" pointer-events="all" style="fill: light-dark(rgb(213, 232, 212), rgb(31, 47, 30)); stroke: light-dark(rgb(130, 179, 102), rgb(68, 110, 44));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 558px; height: 1px; padding-top: 440px; margin-left: 249px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    internal/healthrun — Service
+                                                </b>
+                                                <br/>
+                                                ⑤ URL cap · one run per tenant · run lifecycle
+                                                <br/>
+                                                <i>
+                                                    .NET: application service
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="528" y="431" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="528" y="431">
+                                        internal/healthrun — Service
+                                    </tspan>
+                                    <tspan x="528" y="443">
+                                        ⑤ URL cap · one run per tenant · run lifecycle
+                                    </tspan>
+                                    <tspan x="528" y="455">
+                                        .NET: application service
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="store">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="248" y="570" width="260" height="100" rx="15" ry="15" fill="#ffe6cc" stroke="#d79b00" pointer-events="all" style="fill: light-dark(rgb(255, 230, 204), rgb(54, 33, 10)); stroke: light-dark(rgb(215, 155, 0), rgb(153, 101, 0));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 620px; margin-left: 249px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    healthrun.Store
+                                                </b>
+                                                (interface)
+                                                <br/>
+                                                implemented by store/memory, store/postgres
+                                                <br/>
+                                                <i>
+                                                    .NET: Repository pattern
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="378" y="611" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="378" y="611">
+                                        healthrun.Store (interface)
+                                    </tspan>
+                                    <tspan x="378" y="623">
+                                        implemented by store/memory, store/postgres
+                                    </tspan>
+                                    <tspan x="378" y="635">
+                                        .NET: Repository pattern
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="engine">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="548" y="570" width="260" height="100" rx="15" ry="15" fill="#e1d5e7" stroke="#9673a6" pointer-events="all" style="fill: light-dark(rgb(225, 213, 231), rgb(57, 47, 63)); stroke: light-dark(rgb(150, 115, 166), rgb(149, 119, 163));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 258px; height: 1px; padding-top: 620px; margin-left: 549px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    healthrun.Runner
+                                                </b>
+                                                (interface)
+                                                <br/>
+                                                implemented by internal/engine, or a test fake
+                                                <br/>
+                                                <i>
+                                                    .NET: injected dependency
+                                                </i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="678" y="611" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="678" y="611">
+                                        healthrun.Runner (interface)
+                                    </tspan>
+                                    <tspan x="678" y="623">
+                                        implemented by internal/engine, or a test fake
+                                    </tspan>
+                                    <tspan x="678" y="635">
+                                        .NET: injected dependency
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="legend">
+                    <g transform="translate(0.5,0.5)">
+                        <rect x="848" y="390" width="180" height="150" rx="22.5" ry="22.5" fill="#f5f5f5" stroke="#999999" pointer-events="all" style="fill: light-dark(rgb(245, 245, 245), rgb(26, 26, 26)); stroke: light-dark(rgb(153, 153, 153), rgb(106, 106, 106));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 172px; height: 1px; padding-top: 399px; margin-left: 856px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #000000; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                                <b>
+                                                    Reading this
+                                                </b>
+                                                <br/>
+                                                <br/>
+                                                Arrows are calls and point the way dependencies flow: down only.
+                                                <br/>
+                                                <br/>
+                                                ① … ⑦ is one POST /runs.
+                                                <br/>
+                                                <br/>
+                                                Interfaces are declared where they are used; implementations sit below.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="856" y="409" fill="#000000" font-family="Helvetica" font-size="10px" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="856" y="409">
+                                        Reading this
+                                    </tspan>
+                                    <tspan x="856" y="421"></tspan>
+                                    <tspan x="856" y="433">
+                                        Arrows are calls and point the way
+                                    </tspan>
+                                    <tspan x="856" y="445">
+                                        dependencies flow: down only.
+                                    </tspan>
+                                    <tspan x="856" y="457"></tspan>
+                                    <tspan x="856" y="469">
+                                        ① … ⑦ is one POST /runs.
+                                    </tspan>
+                                    <tspan x="856" y="481"></tspan>
+                                    <tspan x="856" y="493">
+                                        Interfaces are declared where they are
+                                    </tspan>
+                                    <tspan x="856" y="505">
+                                        used; implementations sit below.
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_cmd">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 528 60 L 528 117.76" fill="none" stroke="#b85450" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke" style="stroke: light-dark(rgb(184, 84, 80), rgb(215, 129, 126));"/>
+                        <path d="M 524.5 111.88 L 528 118.88 L 531.5 111.88" fill="none" stroke="#b85450" stroke-miterlimit="10" pointer-events="all" style="stroke: light-dark(rgb(184, 84, 80), rgb(215, 129, 126));"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 90px; margin-left: 528px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                wires via Deps{}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="528" y="93" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    wires via Deps{}
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_client">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 120 220 L 194 220 L 194 230 L 259.88 230" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 266.88 230 L 259.88 233.5 L 259.88 226.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 225px; margin-left: 194px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                ① POST /runs
+                                                <br/>
+                                                X-Tenant-ID: acme
+                                                <br/>
+                                                body: one URL per line
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="194" y="216" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    <tspan x="194" y="216">
+                                        ① POST /runs
+                                    </tspan>
+                                    <tspan x="194" y="228">
+                                        X-Tenant-ID: acme
+                                    </tspan>
+                                    <tspan x="194" y="240">
+                                        body: one URL per line
+                                    </tspan>
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_obs_tenant">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 428 230 L 439.88 230" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 446.88 230 L 439.88 233.5 L 439.88 226.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                </g>
+                <g data-cell-id="e_tenant_handlers">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 608 230 L 619.88 230" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 626.88 230 L 619.88 233.5 L 619.88 226.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                </g>
+                <g data-cell-id="e_lookup">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 528 170 L 528 150 L 938 150 L 938 161.88" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 938 168.88 L 934.5 161.88 L 941.5 161.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 150px; margin-left: 733px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                Lookup(id)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="733" y="153" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    Lookup(id)
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_start">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 708 290 L 708 340 L 528 340 L 528 381.88" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 528 388.88 L 524.5 381.88 L 531.5 381.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 340px; margin-left: 618px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                StartRun(ctx, tenantID, maxURLs, urls)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="618" y="343" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    StartRun(ctx, tenantID, maxURLs, urls)
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_store">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 528 490 L 528 530 L 378 530 L 378 561.88" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 378 568.88 L 374.5 561.88 L 381.5 561.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 530px; margin-left: 453px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                ⑥ Create · Update · Get
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="453" y="533" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    ⑥ Create · Update · Get
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+                <g data-cell-id="e_engine">
+                    <g transform="translate(0.5,0.5)">
+                        <path d="M 528 490 L 528 530 L 678 530 L 678 561.88" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: var(--ge-adaptive-fg, #000000);"/>
+                        <path d="M 678 568.88 L 674.5 561.88 L 681.5 561.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: var(--ge-adaptive-fg, #000000); stroke: var(--ge-adaptive-fg, #000000);"/>
+                    </g>
+                    <g>
+                        <g transform="scale(0.9999999999999999)">
+                            <switch>
+                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="101%" height="101%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 530px; margin-left: 603px;">
+                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
+                                            <div style="display: inline-block; font-size: 10px; font-family: Helvetica; color: var(--ge-adaptive-fg, #000000); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
+                                                ⑦ Run(ctx, urls) · background
+                                            </div>
+                                        </div>
+                                    </div>
+                                </foreignObject>
+                                <text x="603" y="533" fill="#000000" font-family="Helvetica" font-size="10px" text-anchor="middle" style="fill: var(--ge-adaptive-fg, #000000);">
+                                    ⑦ Run(ctx, urls) · background
+                                </text>
+                            </switch>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.drawio.com/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

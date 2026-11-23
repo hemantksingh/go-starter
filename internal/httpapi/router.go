@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
+	"github.com/hemantksingh/go-starter/internal/healthrun"
 	"github.com/hemantksingh/go-starter/internal/tenant"
 	"go.uber.org/zap"
 )
@@ -16,7 +17,7 @@ import (
 type Deps struct {
 	Log          *zap.Logger
 	Tenants      *tenant.Registry
-	Runs         RunService
+	Runs         *healthrun.Service
 	MaxBodyBytes int64
 }
 

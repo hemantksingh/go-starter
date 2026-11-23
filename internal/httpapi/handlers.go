@@ -2,7 +2,6 @@ package httpapi
 
 import (
 	"bufio"
-	"context"
 	"errors"
 	"net/http"
 	"strings"
@@ -12,17 +11,11 @@ import (
 	"github.com/hemantksingh/go-starter/internal/tenant"
 )
 
-// RunService is what the handlers need from the domain. Declared here, by the
-// consumer; *healthrun.Service satisfies it.
-type RunService interface {
-	StartRun(ctx context.Context, tenantID string, tenantMaxURLs int, urls []string) (healthrun.Run, error)
-	GetRun(ctx context.Context, tenantID, id string) (healthrun.Run, error)
-}
-
-var _ RunService = (*healthrun.Service)(nil)
-
+// handlers hold the domain service directly. No interface in between: there is
+// one implementation and the tests use it, so an interface here would be
+// indirection with nothing on the other side.
 type handlers struct {
-	runs         RunService
+	runs         *healthrun.Service
 	maxBodyBytes int64
 }
 

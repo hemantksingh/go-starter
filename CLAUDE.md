@@ -51,7 +51,9 @@ Keep it that way when adding targets.
 
 ## Architecture
 
-The dependency direction is the central lesson and must be preserved:
+`docs/architecture.md` walks one request through every component and says why each boundary
+exists; read it first if the layering looks like indirection. The dependency direction is the
+central lesson and must be preserved:
 
 ```
 cmd/* (composition root: the ONLY place concrete types are wired together)
@@ -66,8 +68,9 @@ cmd/* (composition root: the ONLY place concrete types are wired together)
   introduce wire/fx without discussion.
 - **Interfaces are declared by the consumer, not the implementer.** `healthrun` defines `Store`
   and `Runner` (what it needs); `store/memory` and `engine` satisfy them without importing it.
-  `httpapi` likewise declares `RunService`. Depend on the small interface, not the concrete
-  struct. The package is `healthrun`, not `health`, to avoid colliding with `/healthz`.
+  Declare an interface only where a second implementation or a test fake exists: `httpapi`
+  holds `*healthrun.Service` directly. The package is `healthrun`, not `health`, to avoid
+  colliding with `/healthz`.
 - **Multi-tenancy is database-per-tenant** (ADR 0002). The tenant is resolved ONCE per request
   by middleware from `X-Tenant-ID` and placed on the context via `tenant.WithContext`; nothing
   below the middleware chooses a tenant. `/healthz` sits outside the tenant group.
